@@ -17,7 +17,215 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById('bienvenida')) cargarDashboard();
 });
 
+
+
+//Nuevo
+const autosAPI = [
+    {
+        id: 1,
+        marca: "Toyota",
+        modelo: "Corolla",
+        año: 2022,
+        precio: 389000,
+        categoria: "Sedán",
+        descripcion: "Eficiencia, seguridad y confort.",
+        imagen: "https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg"
+    },
+    {
+        id: 2,
+        marca: "Honda",
+        modelo: "Civic",
+        año: 2021,
+        precio: 420000,
+        categoria: "Sedán",
+        descripcion: "Diseño deportivo y rendimiento confiable.",
+        imagen: "https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg"
+    },
+    {
+        id: 3,
+        marca: "Mazda",
+        modelo: "Mazda 3",
+        año: 2023,
+        precio: 445000,
+        categoria: "Hatchback",
+        descripcion: "Estilo premium y manejo suave.",
+        imagen: "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
+    },
+    {
+        id: 4,
+        marca: "Ford",
+        modelo: "Mustang",
+        año: 2020,
+        precio: 760000,
+        categoria: "Deportivo",
+        descripcion: "Potencia y estilo agresivo.",
+        imagen: "https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg"
+    },
+    {
+        id: 5,
+        marca: "Tesla",
+        modelo: "Model 3",
+        año: 2023,
+        precio: 950000,
+        categoria: "Eléctrico",
+        descripcion: "Conducción eléctrica y tecnología avanzada.",
+        imagen: "https://images.pexels.com/photos/799443/pexels-photo-799443.jpeg"
+    },
+    {
+        id: 6,
+        marca: "BMW",
+        modelo: "M3",
+        año: 2022,
+        precio: 1350000,
+        categoria: "Deportivo",
+        descripcion: "Potencia alemana y lujo deportivo.",
+        imagen: "https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg"
+    },
+    {
+        id: 7,
+        marca: "Audi",
+        modelo: "A4",
+        año: 2021,
+        precio: 980000,
+        categoria: "Sedán",
+        descripcion: "Lujo, elegancia y tecnología.",
+        imagen: "https://images.pexels.com/photos/799443/pexels-photo-799443.jpeg"
+    },
+    {
+        id: 8,
+        marca: "Chevrolet",
+        modelo: "Camaro",
+        año: 2022,
+        precio: 840000,
+        categoria: "Deportivo",
+        descripcion: "Muscle car icónico con gran desempeño.",
+        imagen: "https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg"
+    },
+    {
+        id: 9,
+        marca: "Nissan",
+        modelo: "Altima",
+        año: 2022,
+        precio: 520000,
+        categoria: "Sedán",
+        descripcion: "Confort y eficiencia familiar.",
+        imagen: "https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg"
+    },
+    {
+        id: 10,
+        marca: "Kia",
+        modelo: "Sportage",
+        año: 2023,
+        precio: 620000,
+        categoria: "SUV",
+        descripcion: "Espacio, comodidad y diseño moderno.",
+        imagen: "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
+    },
+    {
+        id: 11,
+        marca: "Hyundai",
+        modelo: "Tucson",
+        año: 2023,
+        precio: 610000,
+        categoria: "SUV",
+        descripcion: "Buena relación calidad-precio.",
+        imagen: "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
+    },
+    {
+        id: 12,
+        marca: "Volkswagen",
+        modelo: "Jetta",
+        año: 2022,
+        precio: 430000,
+        categoria: "Sedán",
+        descripcion: "Clásico sedán confiable y eficiente.",
+        imagen: "https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg"
+    },
+    {
+        id: 13,
+        marca: "Subaru",
+        modelo: "WRX",
+        año: 2021,
+        precio: 890000,
+        categoria: "Deportivo",
+        descripcion: "Rendimiento extremo con tracción AWD.",
+        imagen: "https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg"
+    },
+    {
+        id: 14,
+        marca: "Jeep",
+        modelo: "Wrangler",
+        año: 2020,
+        precio: 780000,
+        categoria: "SUV",
+        descripcion: "Ideal para aventura y terrenos difíciles.",
+        imagen: "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
+    },
+    {
+        id: 15,
+        marca: "Mercedes-Benz",
+        modelo: "Clase C",
+        año: 2023,
+        precio: 1180000,
+        categoria: "Sedán",
+        descripcion: "Lujo y elegancia premium.",
+        imagen: "https://images.pexels.com/photos/799443/pexels-photo-799443.jpeg"
+    },
+    {
+        id: 16,
+        marca: "Porsche",
+        modelo: "911",
+        año: 2021,
+        precio: 3200000,
+        categoria: "Deportivo",
+        descripcion: "Uno de los autos deportivos más icónicos.",
+        imagen: "https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg"
+    },
+    {
+        id: 17,
+        marca: "Lexus",
+        modelo: "IS 350",
+        año: 2022,
+        precio: 1150000,
+        categoria: "Sedán",
+        descripcion: "Confort premium y manejo suave.",
+        imagen: "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
+    },
+    {
+        id: 18,
+        marca: "Cadillac",
+        modelo: "Escalade",
+        año: 2021,
+        precio: 2200000,
+        categoria: "SUV",
+        descripcion: "SUV de lujo con gran presencia.",
+        imagen: "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
+    },
+    {
+        id: 19,
+        marca: "Volvo",
+        modelo: "XC60",
+        año: 2022,
+        precio: 890000,
+        categoria: "SUV",
+        descripcion: "Seguridad y tecnología escandinava.",
+        imagen: "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
+    },
+    {
+        id: 20,
+        marca: "Ferrari",
+        modelo: "F8 Tributo",
+        año: 2020,
+        precio: 5800000,
+        categoria: "Deportivo",
+        descripcion: "Superdeportivo con motor V8 impresionante.",
+        imagen: "https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg"
+    }
+];
+
 // DATOS INICIALES - CATÁLOGO (21 AUTOS CON IMÁGENES CORRESPONDIENTES)
+
+/*
 function inicializarCatalogo() {
     const catalogo = [
         { 
@@ -31,7 +239,7 @@ function inicializarCatalogo() {
         },
         { 
             id: 2, 
-            nombre: "Honda CR-V 2022", 
+            nombre: "Audi R8 2022", 
             precio: 520000, 
             descripcion: "SUV | Híbrido | 4x2 | 22,000 km",
             imagen: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=800&q=80",
@@ -212,6 +420,107 @@ function inicializarCatalogo() {
     ];
     localStorage.setItem('catalogo', JSON.stringify(catalogo));
 }
+    */
+
+
+
+
+
+//nuevo
+async function obtenerAutos() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(autosAPI);
+        }, 300); 
+    });
+}
+function filtrarAutos(categoria) {
+
+    const contenedor = document.getElementById("contenedor-autos");
+    contenedor.innerHTML = "";
+
+    const filtrados = autosAPI.filter(auto => 
+        auto.categoria.toLowerCase() === categoria.toLowerCase()
+    );
+
+    if (filtrados.length === 0) {
+        contenedor.innerHTML = "<p>No hay autos de esta categoría.</p>";
+        return;
+    }
+
+    filtrados.forEach(auto => {
+        const card = document.createElement("div");
+        card.classList.add("card-auto");
+
+        card.innerHTML = `
+            <img class="imagen-auto" src="${auto.imagen}" alt="${auto.marca} ${auto.modelo}">
+            <h3>${auto.marca} ${auto.modelo}</h3>
+            <p>${auto.descripcion}</p>
+            <p class="precio">$${auto.precio.toLocaleString()}</p>
+            <br>
+            <button onclick="agregarAFavoritos(${auto.id})" class="btn btn-outline-danger">
+                <i class="bi bi-heart"></i>
+            </button>
+            <button onclick="agregarAlCarrito(${auto.id})" class="btn btn-outline-warning ms-2">
+                <i class="bi bi-cart-plus"></i> Agregar al carrito
+            </button>
+        `;
+        contenedor.appendChild(card);
+    });
+}
+
+function mostrarTodos() {
+    document.getElementById("contenedor-autos").innerHTML = "";
+    autosAPI.forEach(auto => {
+        const card = document.createElement("div");
+        card.classList.add("card-auto");
+
+        card.innerHTML = `
+            <img class="imagen-auto" src="${auto.imagen}" alt="${auto.marca} ${auto.modelo}">
+            <h3>${auto.marca} ${auto.modelo}</h3>
+            <p>${auto.descripcion}</p>
+            <p class="precio">$${auto.precio.toLocaleString()}</p>
+            <br>
+            <button onclick="agregarAFavoritos(${auto.id})" class="btn btn-outline-danger">
+                <i class="bi bi-heart"></i>
+            </button>
+            <button onclick="agregarAlCarrito(${auto.id})" class="btn btn-outline-warning ms-2">
+                <i class="bi bi-cart-plus"></i> Agregar al carrito
+            </button>
+        `;
+
+        document.getElementById("contenedor-autos").appendChild(card);
+    });
+}
+//hasta aqui
+
+document.addEventListener("DOMContentLoaded", async () => {
+    const contenedor = document.getElementById("contenedor-autos");
+    const autos = await obtenerAutos();
+
+    autos.forEach(auto => {
+        const card = document.createElement("div");
+        card.classList.add("card-auto");
+
+        card.innerHTML = `
+            <img src="${auto.imagen}" alt="${auto.marca} ${auto.modelo}">
+            <h3>${auto.marca} ${auto.modelo}</h3>
+            <p>${auto.descripcion}</p>
+            <span class="precio">$${auto.precio}</span>
+            <br>
+            <button onclick="agregarAFavoritos(${auto.id})" class="btn btn-outline-danger">
+                <i class="bi bi-heart"></i>
+            </button>
+            <button onclick="agregarAlCarrito(${auto.id})" class="btn btn-outline-warning ms-2">
+                 <i class="bi bi-cart-plus"></i> Agregar al carrito
+             </button>
+        `;
+
+        contenedor.appendChild(card);
+    });
+});
+
+
 
 // AUTENTICACIÓN - VERIFICACIÓN
 function verificarAutenticacion() {
@@ -245,7 +554,7 @@ function registrarUsuario(event) {
     }
     
     const nuevoUsuario = {
-        id: Date.now(),
+        id,
         nombre,
         email,
         password
@@ -285,6 +594,7 @@ function cerrarSesion() {
 }
 
 // CATÁLOGO - CARGAR
+/*
 function cargarCatalogo() {
     const catalogo = JSON.parse(localStorage.getItem('catalogo')) || [];
     const container = document.getElementById('catalogo');
@@ -313,7 +623,8 @@ function cargarCatalogo() {
             </div>
         `).join('');
     }
-}
+}*/
+
 
 // FAVORITOS - AGREGAR
 function agregarAFavoritos(autoId) {
@@ -538,4 +849,5 @@ function inicializarEventos() {
     window.removerDeFavoritos = removerDeFavoritos;
     window.removerDelCarrito = removerDelCarrito;
     window.comprarCarrito = comprarCarrito;
+    window.obtenerAutos = obtenerAutos;
 }
