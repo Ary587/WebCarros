@@ -22,6 +22,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
                     <li class="nav-item"><a class="nav-link" href="dashboard.html" id="nav-dashboard" style="display:none;">Mi cuenta</a></li>
                     <li class="nav-item ms-2">
                         <a class="nav-link btn btn-outline-dark px-3" href="login.html" id="nav-login">Iniciar sesión</a>
@@ -33,10 +34,9 @@
 
     <header class="hero-section d-flex align-items-center text-white text-center">
         <div class="container position-relative z-2">
-            
             <h1 class="display-4 fw-bold mb-3">Tu próximo auto te espera aquí</h1>
             <p class="lead mb-4">Miles de autos certificados y con garantía te esperan.</p>
-           
+
             <div class="search-box bg-white p-4 rounded shadow text-dark mx-auto">
                 <div class="row g-3">
                     <div class="col-md-3">
@@ -150,6 +150,37 @@
             </div>
         </div>
     </section>
+    
+
+    <section id="mapa" class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold">Ubicación</h2>
+            <div id="map" style="height: 600px; width: 100%;"></div>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcwhQy6F3isu_jeEU1qXUxQhJwbWLdFEQ&callback=initMap" async defer></script>
+    <script>
+        // Inicia el mapa
+        function initMap() {
+            var ubicacion = {lat: 21.063606, lng: -101.5815973};  
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: ubicacion
+            });
+
+            var marker = new google.maps.Marker({
+                position: ubicacion,
+                map: map,
+                title: 'Ubicación de AutoPremium'
+            });
+        }
+    </script>
+
+
 
     <footer id="contacto" class="bg-dark text-white pt-5 pb-3">
         <div class="container">
