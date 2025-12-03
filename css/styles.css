@@ -1,0 +1,54 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero-section {
+    background-image: url('https://images.unsplash.com/photo-1724391114112-c83ad59f1d5f?fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000');
+    background-size: cover;
+    background-position: center;
+    height: 93vh;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+}
+
+.search-box {
+    max-width: 900px;
+    border-top: 5px solid #dc3545;
+}
+
+.car-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.car-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.shadow-hover {
+    transition: box-shadow 0.3s ease;
+}
+
+.shadow-hover:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-img {
+    height: 180px;
+    object-fit: cover;
+}
+
+.vote-badge {
+    font-size: .9rem;
+    padding: .2rem .5rem;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
