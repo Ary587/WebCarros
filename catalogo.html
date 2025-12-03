@@ -29,9 +29,22 @@
         </div>
     </nav>
 
+<!-- lo nuevo -->
+<div class="filtros">
+    <button onclick="filtrarAutos('Sedán')">Sedanes</button>
+    <button onclick="filtrarAutos('SUV')">SUV</button>
+    <button onclick="filtrarAutos('Deportivo')">Deportivos</button>
+    <button onclick="filtrarAutos('Eléctrico')">Eléctricos</button>
+    <button onclick="mostrarTodos()">Todos</button>
+</div>
+
 <div class="container mt-4">
     <h2 class="fw-bold mb-3">Catálogo de autos</h2>
     <div id="catalogo"></div>
+</div>
+
+<div class="container mt-4"></div>
+    <div id="contenedor-autos" class="contenedor-autos"></div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -65,4 +78,5 @@
     </footer>
 
 </html>
+
 
